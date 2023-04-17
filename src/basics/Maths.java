@@ -23,7 +23,7 @@ public class Maths {
 	}
 
 	public void square(Double a) {
-		System.out.println("Square is : " + Math.pow(a, 2));
+		System.out.println("Square is : " + df.format(Math.pow(a, 2)));
 	}
 
 	public void cube(Double a) {
