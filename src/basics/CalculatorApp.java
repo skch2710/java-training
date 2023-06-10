@@ -1,28 +1,28 @@
 package basics;
 
-import java.util.Scanner;
-
 public class CalculatorApp {
     public static void main(String[] args) {
     	
     	Maths maths = new Maths();
+    	Entry entry = new Entry();
     	
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         Double firstNumber, secondNumber=0d;
         String operator;
 
         // Input first number
         System.out.print("Enter the first number: ");
-        firstNumber = scanner.nextDouble();
+//        firstNumber = scanner.nextDouble();
+        firstNumber = entry.acceptDouble();
 
         // Input operator
         System.out.print("Enter an operator (+, -, *, /,square,cube : ");
-        operator = scanner.next();
+        operator = entry.acceptString();
 
         if( ! operator.equalsIgnoreCase("square") || operator.equalsIgnoreCase("cube")) {
             // Input second number
             System.out.print("Enter the second number: ");
-            secondNumber = scanner.nextDouble();
+            secondNumber = entry.acceptDouble();
         }
 
         // Perform operation and display the result
@@ -52,7 +52,6 @@ public class CalculatorApp {
             default:
                 System.out.println("Error: Invalid operator");
         }
-        scanner.close();
     }
 }
 
